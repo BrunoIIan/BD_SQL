@@ -1,0 +1,23 @@
+Tema: Venda de Ingressos
+
+1) - App de venda de ingressos, onde terá em sua página inicial os ingressos anunciados com valor, quantidade de ingressos disponivel, localidade do envento e contendo também algumas informações a mais ao abrir a anuncio do ingresso.
+	Cada pessoa vai estar cadastrada no sistema, com seu dados pessoais e bancários facilitando a compra de ingressos.
+	Terá um fórum de ajuda para tirar suas dúvidas refente ao app, a pessoa vai fazer a pergunta e aguarda ser respondida.
+	Será rápido para comprar qualquer tipo de ingresso e também devolvido o ingresso caso tenha algum problema.
+
+
+2) - Nesse banco de dados deverá conter os seguintes dados:
+
+Tabela - Colunas:
+
+-- ajuda - ID(primary key), nome(foreng key), pergunta(varchar(300)), resposta(varchar(300)). 
+-- usuario_ajuda - id_usuario, id_ajuda
+* Tabelas serão relacionadas contendo uma outra tabela.
+
+-- usuario - ID(primary key), nome(varchar(30)), email(varchar(50)), cpf(varchar(14)), nom_cart(varchar(30)), num_cart(integer(6)), val_cart(integer(4))
+-- usuario_log - ID(primary key), usuario(varchar(20)), senha(password(20)), id_usuario (foreng key)
+* Tabelas serão relacionadas
+
+-- ingressos - ID(primary key), nom_ingresso(varchar(40)), data(date), hora_even(date), preco(integer(5)), qtd_disp(integer(1000)), qtd_vend(integer(1000)), qtd_devol(integer(1000))
+-- ingressos_inf - ID(primary key), informacao(varchar(400)), localidade(varchar(80)), programacao(varchar(50)), duracao(integer(10)), id_ingresso(foreng key)
+* Tabelas serão relacionadas
